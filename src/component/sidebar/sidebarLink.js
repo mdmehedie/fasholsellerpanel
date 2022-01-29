@@ -1,7 +1,11 @@
 import React, { useState} from 'react';
 import {Link} from 'react-router-dom';
+
+
 const SidebarLink = ({menu}) => {
+
     const [show, setShow] = useState(false);
+
     if(!menu.submenu){
         return(
             <Link className="inline-flex py-3 items-center w-full text-base font-semibold transition-colors duration-150 hover:text-gray-800 dark:hover:text-gray-200" to={menu.link}>
@@ -10,6 +14,7 @@ const SidebarLink = ({menu}) => {
             </Link>
         );
     }
+    
     return (
         
         <>
